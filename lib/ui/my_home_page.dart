@@ -70,7 +70,10 @@ class MyHomePage extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: Colors.black),
                   ),
-                  const Icon(Icons.notifications),
+                  GestureDetector(
+                      onTap: () {
+                        controller.getDocumentData(controller.userList.value[index]);
+                      }, child: const Icon(Icons.notifications)),
                 ],
               );
             },
